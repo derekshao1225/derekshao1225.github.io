@@ -1,22 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://derekshao1225.github.io/</id>
-    <title>Derek</title>
-    <updated>2021-12-18T05:30:14.620Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://derekshao1225.github.io/"/>
-    <link rel="self" href="https://derekshao1225.github.io/atom.xml"/>
-    <subtitle>Derek&apos;s technical life</subtitle>
-    <logo>https://derekshao1225.github.io/images/avatar.png</logo>
-    <icon>https://derekshao1225.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Derek</rights>
-    <entry>
-        <title type="html"><![CDATA[进程与线程]]></title>
-        <id>https://derekshao1225.github.io/post/jin-cheng-yu-xian-cheng/</id>
-        <link href="https://derekshao1225.github.io/post/jin-cheng-yu-xian-cheng/">
-        </link>
-        <updated>2021-12-16T01:23:52.000Z</updated>
-        <content type="html"><![CDATA[<p>进程：是指一个内存中运行的应用程序，每个进程都有一个独立的内存空间<br>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>进程与线程 | Derek</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://derekshao1225.github.io//favicon.ico?v=1639805336973">
+<link rel="stylesheet" href="https://derekshao1225.github.io//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="进程：是指一个内存中运行的应用程序，每个进程都有一个独立的内存空间
+线程：是进程中的一个执行路径，共享一个内存空间，线程之间可以自由切换，并发执行; 一个进程最少有一个线程，线程实际上是在进程基础之上的进一步划分，一个进程启动之后，里面的若..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://derekshao1225.github.io/">
+        <img src="https://derekshao1225.github.io//images/avatar.png?v=1639805336973" class="site-logo">
+        <h1 class="site-title">Derek</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Derek's technical life
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://derekshao1225.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">进程与线程</h2>
+            <div class="post-date">2021-12-15</div>
+            
+              <div class="feature-container" style="background-image: url('https://derekshao1225.github.io//post-images/jin-cheng-yu-xian-cheng.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>进程：是指一个内存中运行的应用程序，每个进程都有一个独立的内存空间<br>
 线程：是进程中的一个执行路径，共享一个内存空间，线程之间可以自由切换，并发执行; 一个进程最少有一个线程，线程实际上是在进程基础之上的进一步划分，一个进程启动之后，里面的若干执行路径又可以划分成若干个线程<br>
 Java中每个线程独立拥有一个Stack内存，所有线程公用一个Heap内存</p>
 <p>线程调度<br>
@@ -98,38 +180,46 @@ service.execute(Runnable任务类); //这是其他几个线程池的执行方式
 Thread t = new Thread( ( 参数 ) -&gt; { //等同于实现Runnable内部的run( )方法<br>
 //函数内部表达式<br>
 } );</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://derekshao1225.github.io/post/hello-gridea/</id>
-        <link href="https://derekshao1225.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://derekshao1225.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
