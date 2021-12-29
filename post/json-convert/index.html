@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Derek</title>
+<title>JSON convert | Derek</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,13 @@
 
 
 
-    <meta name="description" content="Derek&#39;s technical life">
-    
+    <meta name="description" content="Gson: Java Object to JSON String / JSON String to Java Object
+Steps:
+
+import gson.jar
+Java Object to JSON String
+String ..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -89,69 +94,52 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://derekshao1225.github.io/post/json-convert/">
-                  <h2 class="post-title">JSON convert</h2>
-                </a>
-                <div class="post-date">
-                  2021-12-28
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
+          <div class="post-detail">
+            <h2 class="post-title">JSON convert</h2>
+            <div class="post-date">2021-12-28</div>
+            
+            <div class="post-content" v-pre>
+              <p>Gson: Java Object to JSON String / JSON String to Java Object</p>
+<p>Steps:</p>
+<ol>
+<li>import gson.jar</li>
+<li>Java Object to JSON String<br>
+String json = new Gson().toJSON(...obj);<br>
+example:<br>
+Book b = BookDao.find();<br>
+String json = new Gson().toJson(b);<br>
+System.out.println(json);</li>
+<li>JSON String to Java Object<br>
+obj = new Gson().fromJson(json, Obj.class);<br>
+example:<br>
+String json = &quot;{&quot;id&quot;:1,&quot;name&quot;:&quot;gold apple&quot;,&quot;price&quot;:198.0}&quot;;<br>
+Book book = new Gson().fromJson(json, Book.class);<br>
+System.out.println(book);</li>
+<li>JSON to HashMap<br>
+example:<br>
+String json = &quot;{&quot;id&quot;:1,&quot;name&quot;:&quot;gold apple&quot;,&quot;price&quot;:198.0}&quot;;<br>
+HashMap data = g.fromJson(json, HashMap.class); // turn into a hashmap<br>
+special:<br>
+JSON List Format, &quot;page&quot; : [&quot;first&quot;,&quot;second&quot;,&quot;third&quot;],<br>
+will be turned into key - ArrayList pair</li>
+</ol>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
                 <a href="https://derekshao1225.github.io/post/jin-cheng-yu-xian-cheng/">
-                  <h2 class="post-title">进程与线程</h2>
+                  <h3 class="post-title">
+                    进程与线程
+                  </h3>
                 </a>
-                <div class="post-date">
-                  2021-12-15
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
               </div>
-              
-                <a class="right" href="https://derekshao1225.github.io/post/jin-cheng-yu-xian-cheng/">
-                  <div class="feature-container" style="background-image: url('https://derekshao1225.github.io//post-images/jin-cheng-yu-xian-cheng.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://derekshao1225.github.io/post/hello-gridea/">
-                  <h2 class="post-title">Hello Gridea</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-10
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+            
 
-                </div>
-              </div>
-              
-                <a class="right" href="https://derekshao1225.github.io/post/hello-gridea/">
-                  <div class="feature-container" style="background-image: url('https://derekshao1225.github.io//post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+          </div>
 
         </div>
       </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://derekshao1225.github.io/</id>
     <title>Derek</title>
-    <updated>2021-12-18T05:39:56.277Z</updated>
+    <updated>2021-12-29T08:05:56.079Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://derekshao1225.github.io/"/>
     <link rel="self" href="https://derekshao1225.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://derekshao1225.github.io/images/avatar.png</logo>
     <icon>https://derekshao1225.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Derek</rights>
+    <entry>
+        <title type="html"><![CDATA[JSON convert]]></title>
+        <id>https://derekshao1225.github.io/post/json-convert/</id>
+        <link href="https://derekshao1225.github.io/post/json-convert/">
+        </link>
+        <updated>2021-12-28T18:50:35.000Z</updated>
+        <content type="html"><![CDATA[<p>Gson: Java Object to JSON String / JSON String to Java Object</p>
+<p>Steps:</p>
+<ol>
+<li>import gson.jar</li>
+<li>Java Object to JSON String<br>
+String json = new Gson().toJSON(...obj);<br>
+example:<br>
+Book b = BookDao.find();<br>
+String json = new Gson().toJson(b);<br>
+System.out.println(json);</li>
+<li>JSON String to Java Object<br>
+obj = new Gson().fromJson(json, Obj.class);<br>
+example:<br>
+String json = &quot;{&quot;id&quot;:1,&quot;name&quot;:&quot;gold apple&quot;,&quot;price&quot;:198.0}&quot;;<br>
+Book book = new Gson().fromJson(json, Book.class);<br>
+System.out.println(book);</li>
+<li>JSON to HashMap<br>
+example:<br>
+String json = &quot;{&quot;id&quot;:1,&quot;name&quot;:&quot;gold apple&quot;,&quot;price&quot;:198.0}&quot;;<br>
+HashMap data = g.fromJson(json, HashMap.class); // turn into a hashmap<br>
+special:<br>
+JSON List Format, &quot;page&quot; : [&quot;first&quot;,&quot;second&quot;,&quot;third&quot;],<br>
+will be turned into key - ArrayList pair</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[进程与线程]]></title>
         <id>https://derekshao1225.github.io/post/jin-cheng-yu-xian-cheng/</id>
